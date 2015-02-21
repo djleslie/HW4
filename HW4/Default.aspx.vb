@@ -9,14 +9,16 @@ Partial Class _Default
         Dim preTax As Decimal
         Dim grossPay As Decimal
         Dim afterTax As Decimal
-
-        'Output variable
         Dim Total As Decimal
 
+        'input
         hourlyWage = Val(tb_hourlyWage.Text)
         hoursWorked = Val(tb_hoursWorked.Text)
         preTax = Val(tb_preTax.Text)
+
+        'output
         grossPay = hourlyWage * hoursWorked - preTax
+        grossPayResult.Text = String.Format("{0:C}", grossPay)
 
         If grossPay > 500 Then
             afterTax = Val(tb_afterTax.Text * 1.18)
@@ -24,6 +26,11 @@ Partial Class _Default
             afterTax = Val(tb_afterTax.Text * 1.22)
         End If
 
+
+        'output
         Total = grossPay - afterTax
+        totalNetSalary.Text = String.Format("{0:C}", Total)
+
+
     End Sub
 End Class
