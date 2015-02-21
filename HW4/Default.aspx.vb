@@ -5,7 +5,7 @@ Partial Class _Default
     'Input Variables
     Protected Sub btn_calculate_Click(sender As Object, e As EventArgs) Handles btn_calculate.Click
         Dim hourlyWage As Decimal
-        Dim hoursWorked As Integer
+        Dim hoursWorked As Decimal
         Dim preTax As Decimal
         Dim grossPay As Decimal
         Dim afterTax As Decimal
@@ -20,7 +20,7 @@ Partial Class _Default
         grossPay = hourlyWage * hoursWorked - preTax
         grossPayResult.Text = String.Format("{0:C}", grossPay)
 
-        If grossPay > 500 Then
+        If grossPay >= 500 Then
             afterTax = Val(tb_afterTax.Text * 1.18)
         ElseIf grossPay < 500 Then
             afterTax = Val(tb_afterTax.Text * 1.22)
