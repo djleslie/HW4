@@ -22,18 +22,29 @@ Partial Class _Default
 
 
         If grossPay <= 500 Then
-            taxAmount = afterTax * (1.18)
+            taxAmount = grossPay * 0.18
         ElseIf grossPay > 500 Then
-            taxAmount = afterTax * (1.22)
+            taxAmount = grossPay * 0.22
 
         End If
 
         lbl_taxAmount.Text = String.Format("{0:C}", taxAmount)
 
         'output
-        Total = grossPay - taxAmount
+        Total = grossPay - taxAmount - afterTax
         totalNetSalary.Text = String.Format("{0:C}", Total)
 
+
+    End Sub
+
+    Protected Sub clear_Button_Click(sender As Object, e As EventArgs) Handles clear_Button.Click
+        tb_hourlyWage.Text = String.Empty
+        tb_hoursWorked.Text = String.Empty
+        tb_preTax.Text = String.Empty
+        tb_afterTax.Text = String.Empty
+        grossPayResult.Text = String.Empty
+        lbl_taxAmount.Text = String.Empty
+        totalNetSalary.Text = String.Empty
 
     End Sub
 End Class
