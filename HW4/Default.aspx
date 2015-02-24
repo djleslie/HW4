@@ -62,7 +62,7 @@
         <br />
         <br />
         <br />
-&nbsp;<asp:Label ID="Label5" runat="server" Text="Total Net Salary"></asp:Label>
+&nbsp;&nbsp;&nbsp; <asp:Label ID="Label5" runat="server" Text="Total Net Salary"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="totalNetSalary" runat="server" BorderStyle="Groove" 
             style="margin-left: 0px" Width="111px" BorderColor="Red" BorderWidth="5px"></asp:Label>
